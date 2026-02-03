@@ -3,7 +3,7 @@
 **Новая версия кликера на Kotlin**
 
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.9.0-blue.svg)](https://kotlinlang.org)
-[![Min SDK](https://img.shields.io/badge/minSdk-23-green.svg)](https://developer.android.com)
+[![Min SDK](https://img.shields.io/badge/minSdk-24-green.svg)](https://developer.android.com)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
 
 ## 📱 О проекте
