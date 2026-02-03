@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Тёмная тема (по умолчанию) -->
+    <style name="Base.Theme.Clicker" parent="Theme.Material3.DayNight.NoActionBar">
+
+
+        <!-- Статус бар -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/light_background</item>
+        <item name="android:navigationBarColor" tools:targetApi="o">@color/light_background</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+
+        <!-- Формы -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Clicker.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Clicker.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Clicker.Large</item>
+    </style>
+
+    <style name="Theme.Clicker" parent="Base.Theme.Clicker" />
+
+    <!-- Светлая тема -->
+    <style name="Theme.Clicker.Light" parent="Theme.Material3.DayNight.NoActionBar">
+
+
+        <!-- Статус бар -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/light_background</item>
+        <item name="android:navigationBarColor" tools:targetApi="o">@color/light_background</item>
+
+        <!-- Для Android 23+ (Marshmallow) -->
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+
+        <!-- Формы -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Clicker.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Clicker.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Clicker.Large</item>
+    </style>
+
+    <!-- Формы с закруглёнными углами -->
+    <style name="ShapeAppearance.Clicker.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Clicker.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Clicker.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- В themes.xml добавьте: -->
+    <style name="Theme.Clicker.Light.TabLayout" parent="Widget.Material3.TabLayout">
+        <item name="tabTextColor">@color/light_text_secondary</item>
+        <item name="tabSelectedTextColor">@color/light_text_primary</item>
+        <item name="tabIndicatorColor">@color/light_accent</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/dialog_background">
+
+    <!-- Заголовок настроек -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/dialog_title_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_settings"
+            app:tint="@color/accent_color"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:id="@+id/dialog_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Настройки"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+    </LinearLayout>
+
+    <!-- Разделитель -->
+    <View
+        android:id="@+id/dialog_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="#E0E0E0" />
+
+    <!-- Раздел выбора темы -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите тему"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Контейнер для тем -->
+    <LinearLayout
+        android:id="@+id/theme_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp">
+
+        <!-- Светлая тема -->
+        <LinearLayout
+            android:id="@+id/theme_light_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="4dp">
+
+            <!-- Цветовой индикатор светлой темы -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/theme_indicator_light"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/light_theme"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary" />
+
+            <!-- Галочка выбора -->
+            <ImageView
+                android:id="@+id/theme_light_check"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_check"
+                app:tint="@color/accent_color"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!-- Тёмная тема -->
+        <LinearLayout
+            android:id="@+id/theme_dark_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="4dp">
+
+            <!-- Цветовой индикатор тёмной темы -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/theme_indicator_dark"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dark_theme"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary" />
+
+            <ImageView
+                android:id="@+id/theme_dark_check"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_check"
+                app:tint="@color/accent_color"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Разделитель перед настройками звука -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#E0E0E0" />
+
+    <!-- Раздел настроек звука -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Настройки звука"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Контейнер настроек звука -->
+    <LinearLayout
+        android:id="@+id/sound_settings_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp">
+
+        <!-- Текущий статус звука -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Статус звука:"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary" />
+
+            <TextView
+                android:id="@+id/sound_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Включён"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/success_color" />
+
+        </LinearLayout>
+
+        <!-- Кнопка переключения звука -->
+        <LinearLayout
+            android:id="@+id/sound_toggle_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/toggle_sound"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary" />
+
+            <!-- Кастомный переключатель -->
+            <FrameLayout
+                android:id="@+id/sound_toggle_indicator"
+                android:layout_width="48dp"
+                android:layout_height="24dp"
+                android:background="@drawable/toggle_background_enabled"
+                android:layout_marginStart="8dp">
+
+                <!-- Круглый переключатель -->
+                <View
+                    android:id="@+id/sound_toggle_thumb"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="2dp"
+                    android:layout_gravity="start"
+                    android:background="@drawable/toggle_thumb_enabled" />
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

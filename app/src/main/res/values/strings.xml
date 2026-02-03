@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Clicker</string>
+    <string name="tap_flag">Нажмите на флаг для получения очков</string>
+    <string name="settings">Настройки</string>
+    <string name="shop">Магазин</string>
+
+    <!-- Магазин -->
+    <string name="shop_dialog_title">Магазин</string>
+    <string name="current_points">У вас: %d очков</string>
+    <string name="flags_tab">Флаги</string>
+    <string name="upgrades_tab">Прокачка</string>
+    <string name="buy_button">Купить</string>
+    <string name="close_button">Закрыть</string>
+    <string name="not_enough_points">Недостаточно очков!</string>
+    <string name="purchased">Приобретено ✓</string>
+
+    <!-- Флаги -->
+    <string name="default_flag">Стандартный флаг</string>
+    <string name="green_flag">Зелёный флаг</string>
+    <string name="blue_flag">Синий флаг</string>
+    <string name="red_flag">Красный флаг</string>
+    <string name="purple_flag">Фиолетовый флаг</string>
+
+    <!-- Улучшения -->
+    <string name="auto_clicker">Автокликер</string>
+    <string name="click_multiplier">Множитель кликов</string>
+    <string name="income_boost">Буст доходов</string>
+    <string name="auto_clicker_desc">+%d очко/сек</string>
+    <string name="click_multiplier_desc">x%.1f очка за клик</string>
+    <string name="income_boost_desc">+%d очка/сек</string>
+    <string name="upgrade_cost">Стоимость: %d</string>
+    <string name="upgrade_level">Уровень: %d/%d</string>
+
+    <string name="equipped">Экипирован</string>
+    <string name="max_level">Макс. уровень</string>
+
+    <string name="select_theme">Выберите тему</string>
+    <string name="light_theme">Светлая</string>
+    <string name="dark_theme">Тёмная</string>
+    <string name="turquoise_theme">Бирюзовая</string>
+
+
+    <!-- Энергия -->
+    <string name="energy">Энергия</string>
+    <string name="energy_format">%d/%d</string>
+    <string name="no_energy">Недостаточно энергии!</string>
+    <string name="energy_restoring">Восстановление: 1/%d сек</string>
+    <string name="energy_upgrade_desc">+%d к максимуму энергии</string>
+    <string name="energy_regen_upgrade_desc">Ускорить восстановление</string>
+
+    <!-- Новые улучшения -->
+    <string name="energy_capacity">Ёмкость энергии</string>
+    <string name="energy_regen">Регенерация энергии</string>
+    <string name="critical_chance">Шанс крита</string>
+    <string name="click_storm">Клик-шторм</string>
+    <string name="energy_saver">Экономия энергии</string>
+    <string name="click_power">Мощность клика</string>
+
+    <string name="critical_chance_desc">%d%% шанс крит. урона x%d</string>
+    <string name="click_storm_desc">Шанс на двойной клик: %d%%</string>
+    <string name="energy_saver_desc">Экономия энергии: %d%%</string>
+    <string name="click_power_desc">+%d к базовому урону</string>
+    <string name="energy_regen_desc">Восстановление: 1/%d сек</string>
+
+
+    <string name="max_upgrade_level">Макс. уровень</string>
+
+    <!-- Настройки -->
+    <string name="settings_title">Настройки</string>
+    <string name="theme_selection">Выберите тему</string>
+    <string name="sound_settings">Настройки звука</string>
+    <string name="sound_enabled">Включён</string>
+    <string name="sound_disabled">Выключен</string>
+    <string name="toggle_sound">Вкл/выкл звук</string>
+    <string name="sound_status">Статус звука:</string>
+    <string name="reset_all">Сбросить всё</string>
+    <string name="close">Закрыть</string>
+    <string name="sound_on">Звук включен</string>
+    <string name="sound_off">Звук выключен</string>
+</resources>

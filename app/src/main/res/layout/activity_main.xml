@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".MainActivity">
+
+    <!-- Верхняя панель с очками -->
+    <TextView
+        android:id="@+id/points_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 очков"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:letterSpacing="0.02"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- Основной флаг (прямоугольный) - СДЕЛАН КЛИКАБЕЛЬНЫМ -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flag_card"
+        android:layout_width="240dp"
+        android:layout_height="150dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/points_text"
+        app:layout_constraintBottom_toTopOf="@id/energy_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp">
+
+        <!-- Флаг (НЕ кликабельный, клики обрабатывает CardView) -->
+        <ImageView
+            android:id="@+id/flag_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/flag_basic"
+            android:contentDescription="@string/tap_flag"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@drawable/flag_border" />
+
+        <!-- Контейнер для анимации очков -->
+        <FrameLayout
+            android:id="@+id/points_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Контейнер энергии -->
+    <LinearLayout
+        android:id="@+id/energy_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="3dp"
+        android:background="@drawable/info_background"
+        app:layout_constraintBottom_toTopOf="@id/income_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
+
+        <!-- Иконка энергии -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/ic_energy"
+            app:tint="@color/accent_color" />
+
+        <TextView
+            android:id="@+id/energy_regen_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="1/5 сек"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:visibility="gone" />
+
+        <!-- Прогресс-бар энергии -->
+        <ProgressBar
+            android:id="@+id/energy_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/energy_progress" />
+
+        <!-- Текст энергии -->
+        <TextView
+            android:id="@+id/energy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="30/30"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Нижняя информационная панель -->
+    <LinearLayout
+        android:id="@+id/income_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="@drawable/info_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="40dp">
+
+        <!-- Автодоход -->
+        <TextView
+            android:id="@+id/income_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/сек"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginEnd="24dp" />
+
+        <!-- Множитель -->
+        <TextView
+            android:id="@+id/multiplier_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x1"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+    <!-- Кнопка настроек в правом верхнем углу -->
+    <ImageView
+        android:id="@+id/settings_button"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/settings"
+        android:padding="5dp"
+        android:src="@drawable/ic_settings"
+        app:tint="@color/icon_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Кнопка магазина в левом верхнем углу -->
+    <ImageView
+        android:id="@+id/shop_button"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/shop"
+        android:padding="5dp"
+        android:src="@drawable/ic_shop"
+        app:tint="@color/icon_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
